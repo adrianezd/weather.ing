@@ -1,0 +1,22 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<header class="py-8 px-4 mx-auto max-w-lg lg:py-16 lg:px-6">
+    <div class="flex flex-col items-center justify-center">
+        <h1 class="text-4xl font-bold leading-tight text-center text-gray-900 lg:text-5xl">
+            {{ title }}
+        </h1>
+        <p class="mt-4 text-base leading-normal text-center text-gray-600 lg:text-lg">
+            {{ body }}
+        </p>
+        <a href="{{ href }}" class="inline-block mt-8 px-8 py-4 text-lg font-semibold text-center text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-lg shadow hover:bg-indigo-500 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700 active:bg-indigo-700">
+            Get started
+        </a>
+</header>
